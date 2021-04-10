@@ -1,12 +1,3 @@
-/**
- * Luca - The best bot you'll need for managing and informing members of the server
- * © Discord Bot List 2k19
- *
- * This bot contains all the features you'd ever want from a Discord bot and it's fully open source and free!!
- * Clone and host it yourself and add it to discordbots.org or just invite the bot to your server because I am hosting this in Heroku 24/7!
- * https://discordbots.org/bot/264811613708746752
- */
-
 let bot = require("discord.js");
 var Discord = new bot.Client();
 const request = require('snekfetch');
@@ -21,11 +12,7 @@ function genRandString(length=1) {
 
 console.log('My super secret token OwO', genRandString(10000)); // what is wrong with me?
 
-// ThIs EvEnT iS vErY ImPoRtAnT bEcAuSe At ThIs MoMeNt bOt St						aRtS ReCeIvEinG
-
-
-
-
+// ThIs EvEnT iS vErY ImPoRtAnT bEcAuSe At ThIs MoMeNt bOt StaRtS ReCeIvEinG
 /* eVeRyThInG fRoM tHiS cOrD */
 Discord.on('ready', () => {
   	console.log(`Logged in as ${Discord.user.tag}!`);
@@ -49,7 +36,6 @@ Discord.on('message', function (message) {
     return message.reply('Pong!');
   	}
 });
-  // Cyber28 was here
 Discord.on('message', function (message) {
 	if (message.content === '@everyone') {
 	    return message.reply('@everyone ping ping @everyone')
