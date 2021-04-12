@@ -2,7 +2,7 @@
   "name": "luca",
   "version": "0.0.1",
   "description": "best bot 4 discord",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: test is needed pls kthx\" && exit 1",
     "start": "echo \"no start script 4 u\" && exit 1"
