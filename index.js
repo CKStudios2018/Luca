@@ -42,7 +42,7 @@ Client.on('message', message =>{
     }
 });
   
-const noNoWords = ["sex", "fuck", "condom"];
+const noNoWords = ["sex", "fuck", "shit", "condom"];
 
 Client.on("message", message => {
     var content = message.content;
@@ -57,4 +57,4 @@ Client.on("message", message => {
     }
 })
 
-Client.login('ODI5MzMzNDI4MjgwMjI5OTI4.YG2m8Q.BvtDMfT_13SgflioQn8ZzyAmCdc'); //what is wrong with function us(and our params)?
+Client.login(process.env.token); //what is wrong with function us(and our params)?
