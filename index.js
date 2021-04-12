@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const Client = new Discord.Client();
 const fs = require('fs');
-const prefix = '!;'
+const prefix = '!';
 
 Client.commands = new Discord.Collection();
 
@@ -13,7 +13,7 @@ for(const file of commandFiles){
 }
 
 Client.once('ready', async () => {
-    await client.user.setPresence({status: 'idle'});
+    await Client.user.setPresence({status: 'idle'});
     console.log(`Logged in!`);
 });
 
@@ -25,10 +25,10 @@ Client.on('message', message =>{
 
     if(command === 'ping'){
         Client.commands.get('ping').execute(message, args);
-    } else if(command == 'hi'){
-        Client.commands.get('hello').execute(message, args);
+    } else if(command == 'ello'){
+        message.reply('Hello!');
     } else if(command == 'help'){
-        Client.commands.get('help').execute(message, args);
+        message.channel.send('Commands: `!help`, `!avatar`, `!about`, `!thonk`, `!cat`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`');
     } else if(command == '8Ball'){
         Client.commands.get('8Ball').execute(message, args);
     } else if(command == 'about'){
@@ -37,13 +37,24 @@ Client.on('message', message =>{
         Client.commands.get('eval').execute(message, args);
     } else if(command == 'oliy'){
         message.author.send('Oliy is fat');
+    } else if(command == 'avatar'){
+        Client.commands.get('avatar').execute(message, args, Discord);
     }
 });
   
-  Client.on('message', function (message) {
-      if (message.content.includes('fuck')) {
-          return message.reply('nO swearing!!111!1')
-      }
-  })
+const noNoWords = ["sex", "fuck", "condom"];
 
-Client.login('not process.env.token lol'); //what is wrong with function us(and our params)?
+Client.on("message", message => {
+    var content = message.content;
+    var stringToCheck = content.replace(/\s+/g, '').toLowerCase();
+
+    for (var i = 0; i < noNoWords.length; i++) {
+        if (content.includes(noNoWords[i])){  
+            message.delete();
+            message.reply('nO swearing!!111!1');
+            break
+        }
+    }
+})
+
+Client.login('ODI5MzMzNDI4MjgwMjI5OTI4.YG2m8Q.BvtDMfT_13SgflioQn8ZzyAmCdc'); //what is wrong with function us(and our params)?

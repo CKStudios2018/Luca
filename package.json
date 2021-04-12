@@ -1,16 +1,16 @@
 {
-  "name": "luca",
-  "version": "0.0.1",
-  "description": "best bot 4 discord",
-  "main": "index.js",
+  "name": "discordsys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: test is needed pls kthx\" && exit 1",
-    "start": "echo \"no start script 4 u\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "bots.discord.pw",
+  "author": "CKS Dev Team",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.6.4",
-    "snekfetch": "^4.0.4"
+    "discord.js": "^12.4.1",
+    "jsonfile": "^6.1.0",
+    "random": "^2.2.0"
   }
 }

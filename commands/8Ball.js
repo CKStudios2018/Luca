@@ -24,6 +24,6 @@ module.exports = {
           "Very doubtful",
               "Ask someone else"];
               message.replytext = Math.floor((Math.random() * replies.length) + 0);
-          return message.reply(replies[message.replytext]);
+        message.reply(replies[message.replytext]);
     }
 }
