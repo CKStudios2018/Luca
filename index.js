@@ -57,4 +57,4 @@ Client.on("message", message => {
     }
 })
 
-Client.login(process.env.token); //what is wrong with function us(and our params)?
+Client.login(process.env.token); //what is wrong with us(and our token-revealing params)?
