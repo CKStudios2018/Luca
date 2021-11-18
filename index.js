@@ -42,4 +42,4 @@ client.once('ready', async () => {
         }
     });
 
-client.login('OTEwMjIxNDU0MzM4MDU2MjYz.YZPryQ.lbMwYJgmI0IfzXbhPjADOa8bsgY');
+client.login('lmao i stupid');
